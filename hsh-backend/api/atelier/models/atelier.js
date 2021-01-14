@@ -6,7 +6,7 @@
 
 module.exports = {  
     afterCreate: async (entry) => {
-      axios.post('http://hsh-backend.hidora.com/', entry)
+      axios.post('http://backend.homesafehome.ch/', entry)
         .catch(() => {
             // Ignore
           }
@@ -14,7 +14,7 @@ module.exports = {
     },
   
     afterUpdate: async (entry) => {
-      axios.post('http://hsh-backend.hidora.com/', entry)
+      axios.post('http://backend.homesafehome.ch/', entry)
         .catch(() => {
             // Ignore
           }
@@ -22,7 +22,7 @@ module.exports = {
     },
   
     afterDestroy: async (entry) => {
-      axios.post('http://hsh-backend.hidora.com/', entry)
+      axios.post('http://backend.homesafehome.ch/', entry)
         .catch(() => {
             // Ignore
           }
