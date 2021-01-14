@@ -6,11 +6,11 @@ const path = require('path');
 var exec = require('child_process').exec;
 
 app.get('/rebuild', (req, res) => {
-  exec("gatsby build", function(error, stdout, stderr) {
+  exec("npm run build", function(error, stdout, stderr) {
     if (!error) {
       console.log('rebuild');
     } else {
-      console.log('failed');
+      console.log(error);
     }
 })})
 

@@ -59,7 +59,7 @@ const ContactForm = () => {
             try {
                 const contactRes = await axios({
                     method: 'POST',
-                    url: 'http://45.66.223.134/contacts',
+                    url: 'http://backend.homesafehome.ch/contacts',
                     data,
                 })
                 console.log(contactRes);

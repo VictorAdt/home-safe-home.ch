@@ -66,7 +66,7 @@ const SubscriptionForm = props => {
         try {
             const SubRes = await axios({
                 method: 'POST',
-                url: 'http://45.66.223.134/inscriptions',
+                url: 'http://backend.homesafehome.ch/inscriptions',
                 data,
             })
             if (SubRes.status === 200) {

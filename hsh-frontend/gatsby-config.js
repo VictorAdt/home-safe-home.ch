@@ -32,7 +32,7 @@ module.exports = {
     {
       resolve: "gatsby-source-strapi",
       options: {
-        apiURL: process.env.API_URL || "http://45.66.223.134",
+        apiURL: process.env.API_URL || "http://backend.homesafehome.ch/",
         contentTypes: [
           // List of the Content Types you want to be able to request from Gatsby.
           "atelier",
