@@ -12,7 +12,7 @@ app.get('/rebuild', (req, res) => {
     } else {
       console.log('failed');
     }
-})
+})})
 
 app.use(express.static('public'));
 
