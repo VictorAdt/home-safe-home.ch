@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "titre_page_d_accueils",
+  "info": {
+    "name": "page d'accueil"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "banner": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "workshop": {
+      "type": "text"
+    },
+    "service": {
+      "type": "text"
+    },
+    "consulting": {
+      "type": "text"
+    },
+    "introduction": {
+      "type": "text"
+    }
+  }
+}

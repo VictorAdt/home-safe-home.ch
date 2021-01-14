@@ -1,0 +1,16 @@
+{
+  "kind": "singleType",
+  "collectionName": "rubans",
+  "info": {
+    "name": "ruban"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "texte": {
+      "type": "string"
+    }
+  }
+}

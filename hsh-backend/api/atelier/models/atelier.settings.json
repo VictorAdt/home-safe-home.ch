@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ateliers",
+  "info": {
+    "name": "atelier"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Rencontre",
+        "Atelier"
+      ]
+    },
+    "Date": {
+      "type": "datetime"
+    },
+    "infos": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "description_courte": {
+      "type": "text"
+    },
+    "galerie": {
+      "type": "component",
+      "repeatable": true,
+      "component": "image.galerie"
+    }
+  }
+}

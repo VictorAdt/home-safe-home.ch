@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{XGep:function(e,n,t){"use strict";t.r(n),t.d(n,"pageQuery",(function(){return u}));var a=t("q1tI"),l=t.n(a),r=(t("Wbzz"),t("Bl7J")),i=t("vrFN");n.default=function(e){var n=e.data;return l.a.createElement(r.a,null,l.a.createElement(i.a,{title:"Consulting"}),l.a.createElement("h1",null,n.allStrapiPageConsulting.nodes[0].titre),l.a.createElement("p",null,n.allStrapiPageConsulting.nodes[0].description))};var u="75176520"}}]);
+//# sourceMappingURL=component---src-pages-consulting-js-1b55150ed65d4faea871.js.map

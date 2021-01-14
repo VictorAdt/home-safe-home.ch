@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_consultings",
+  "info": {
+    "name": "page consulting"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "information": {
+      "type": "text"
+    },
+    "section": {
+      "type": "component",
+      "repeatable": true,
+      "component": "section.section"
+    }
+  }
+}

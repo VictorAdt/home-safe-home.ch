@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ruban",
+      "handler": "ruban.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ruban",
+      "handler": "ruban.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ruban",
+      "handler": "ruban.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

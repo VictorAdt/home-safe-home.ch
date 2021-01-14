@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_ateliers",
+  "info": {
+    "name": "page atelier"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "information": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_socials_socials",
+  "info": {
+    "name": "Social",
+    "icon": "users"
+  },
+  "options": {},
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "lien": {
+      "type": "string"
+    }
+  }
+}

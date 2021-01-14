@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_collaborateur_collaborateurs",
+  "info": {
+    "name": "collaborateur",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "prenom": {
+      "type": "string"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "role": {
+      "type": "string"
+    }
+  }
+}

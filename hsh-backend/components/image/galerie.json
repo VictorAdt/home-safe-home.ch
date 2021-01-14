@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_image_galeries",
+  "info": {
+    "name": "galerie",
+    "icon": "th-large"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

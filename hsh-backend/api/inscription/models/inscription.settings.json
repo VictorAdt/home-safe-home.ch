@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inscriptions",
+  "info": {
+    "name": "Inscription"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "atelier": {
+      "model": "atelier"
+    },
+    "nom": {
+      "type": "string"
+    },
+    "prenom": {
+      "type": "string"
+    },
+    "entreprise": {
+      "type": "string"
+    },
+    "adresse": {
+      "type": "string"
+    },
+    "npa": {
+      "type": "string"
+    },
+    "localite": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "telephone": {
+      "type": "biginteger"
+    },
+    "participant": {
+      "type": "integer"
+    }
+  }
+}

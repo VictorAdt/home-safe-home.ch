@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_philosophies",
+  "info": {
+    "name": "page philosophie"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "information": {
+      "type": "text"
+    },
+    "section": {
+      "type": "component",
+      "repeatable": true,
+      "component": "section.section"
+    }
+  }
+}

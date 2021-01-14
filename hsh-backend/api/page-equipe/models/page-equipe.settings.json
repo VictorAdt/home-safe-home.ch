@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_equipes",
+  "info": {
+    "name": "page equipe"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "collaborateur": {
+      "type": "component",
+      "repeatable": true,
+      "component": "collaborateur.collaborateur"
+    },
+    "description": {
+      "type": "text"
+    },
+    "information": {
+      "type": "text"
+    }
+  }
+}

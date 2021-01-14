@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/page-consulting",
+      "handler": "page-consulting.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/page-consulting",
+      "handler": "page-consulting.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/page-consulting",
+      "handler": "page-consulting.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

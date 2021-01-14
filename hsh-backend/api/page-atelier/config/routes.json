@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/page-atelier",
+      "handler": "page-atelier.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/page-atelier",
+      "handler": "page-atelier.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/page-atelier",
+      "handler": "page-atelier.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

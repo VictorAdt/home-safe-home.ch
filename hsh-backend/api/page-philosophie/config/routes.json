@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/page-philosophie",
+      "handler": "page-philosophie.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/page-philosophie",
+      "handler": "page-philosophie.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/page-philosophie",
+      "handler": "page-philosophie.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
