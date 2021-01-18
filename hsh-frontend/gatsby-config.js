@@ -5,8 +5,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "Home Safe Home",
-    description: "Gatsby blog with Strapi",
-    author: "Strapi team",
+    description: "Home Safe Home",
+    author: "SuperMassive",
   },
   plugins: [
     `gatsby-plugin-scroll-reveal`,
@@ -32,7 +32,7 @@ module.exports = {
     {
       resolve: "gatsby-source-strapi",
       options: {
-        apiURL: process.env.API_URL || "http://backend.homesafehome.ch/",
+        apiURL: process.env.API_URL || "http://10.102.5.192:8080",
         contentTypes: [
           // List of the Content Types you want to be able to request from Gatsby.
           "atelier",
@@ -61,8 +61,11 @@ module.exports = {
         background_color: "#663399",
         theme_color: "#663399",
         display: "minimal-ui",
+        icon: `${__dirname}/icon.png`
       },
     },
     "gatsby-plugin-offline",
   ],
 }
+
+

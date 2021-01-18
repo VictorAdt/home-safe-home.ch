@@ -4,28 +4,33 @@
  * Lifecycle callbacks for the `Post` model.
  */
 
-module.exports = {  
-    afterCreate: async (entry) => {
+const request = require('request');
+const axios = require('axios')
+
+
+module.exports = {
+  lifecycles: {
+    async afterCreate(entry) {
+    console.log('oupss')
       axios.post('http://frontend.homesafehome.ch/rebuild', entry)
         .catch(() => {
-            // Ignore
-          }
+          // Ignore
+        }
         );
     },
-  
-    afterUpdate: async (entry) => {
+    async afterUpdate(entry) {
       axios.post('http://frontend.homesafehome.ch/rebuild', entry)
         .catch(() => {
-            // Ignore
-          }
+          // Ignore
+        }
         );
     },
-  
-    afterDestroy: async (entry) => {
+    async afterDestroy(entry) {
       axios.post('http://frontend.homesafehome.ch/rebuild', entry)
         .catch(() => {
-            // Ignore
-          }
+          // Ignore
+        }
         );
-    }
-  };
+    },
+  },
+};
