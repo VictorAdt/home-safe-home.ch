@@ -12,7 +12,7 @@ module.exports = {
   lifecycles: {
     async afterCreate(entry) {
     console.log('oupss')
-      axios.post('http://10.102.3.245/rebuild', entry)
+      axios.post('http://frontend.homesafehome.ch/rebuild', entry)
         .catch(() => {
           // Ignore
         }
