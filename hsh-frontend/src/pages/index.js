@@ -90,7 +90,6 @@ export const pageQuery = graphql`
           consulting
           workshop
           service
-          ... on Node {
           banner {
             childImageSharp {
               fixed(width: 800){
@@ -98,7 +97,6 @@ export const pageQuery = graphql`
               }
             }
           }
-        }
         }
       }
     }
