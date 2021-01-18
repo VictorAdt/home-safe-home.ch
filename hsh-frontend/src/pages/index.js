@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </div>
-      {data.allStrapiTitrePageDAccueil.edges[0].node.banner &&
+      {data.allStrapiTitrePageDAccueil.edges[0].node.banner.childImageSharp.fixed &&
         <Img
           fixed={data.allStrapiTitrePageDAccueil.edges[0].node.banner.childImageSharp.fixed}
           imgStyle={{ position: "static" }}
