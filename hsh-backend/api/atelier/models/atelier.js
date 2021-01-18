@@ -12,21 +12,21 @@ module.exports = {
   lifecycles: {
     async afterCreate(entry) {
     console.log('oupss')
-      axios.post('http://frontend.homesafehome.ch/rebuild', entry)
+      axios.post('10.102.3.245', entry)
         .catch(() => {
           // Ignore
         }
         );
     },
     async afterUpdate(entry) {
-      axios.post('http://frontend.homesafehome.ch/rebuild', entry)
+      axios.post('10.102.3.245', entry)
         .catch(() => {
           // Ignore
         }
         );
     },
     async afterDestroy(entry) {
-      axios.post('http://frontend.homesafehome.ch/rebuild', entry)
+      axios.post('10.102.3.245', entry)
         .catch(() => {
           // Ignore
         }
