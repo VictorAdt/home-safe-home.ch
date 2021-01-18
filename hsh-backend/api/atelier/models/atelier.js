@@ -12,21 +12,21 @@ module.exports = {
   lifecycles: {
     async afterCreate(entry) {
     console.log('oupss')
-      axios.post('10.102.3.245', entry)
+      axios.post('http://10.102.5.192:8080', entry)
         .catch(() => {
           // Ignore
         }
         );
     },
     async afterUpdate(entry) {
-      axios.post('10.102.3.245', entry)
+      axios.post('http://10.102.3.245:8080', entry)
         .catch(() => {
           // Ignore
         }
         );
     },
     async afterDestroy(entry) {
-      axios.post('10.102.3.245', entry)
+      axios.post('http://10.102.3.245:8080', entry)
         .catch(() => {
           // Ignore
         }
