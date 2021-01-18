@@ -6,6 +6,7 @@ const path = require('path');
 var exec = require('child_process').exec;
 
 app.get('/rebuild', (req, res) => {
+  console.log('requsest received');
   exec("npm run build", function(error, stdout, stderr) {
     if (!error) {
       console.log('rebuild');
