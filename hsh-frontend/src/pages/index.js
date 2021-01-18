@@ -25,8 +25,8 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </div>
-      { data.allStrapiTitrePageDAccueil.edges[0].node.banner &&
-        <Img 
+      {data.allStrapiTitrePageDAccueil.edges[0].node.banner &&
+        <Img
           fixed={data.allStrapiTitrePageDAccueil.edges[0].node.banner.childImageSharp.fixed}
           imgStyle={{ position: "static" }}
         />
@@ -90,6 +90,7 @@ export const pageQuery = graphql`
           consulting
           workshop
           service
+          ... on Node {
           banner {
             childImageSharp {
               fixed(width: 800){
@@ -97,6 +98,7 @@ export const pageQuery = graphql`
               }
             }
           }
+        }
         }
       }
     }
