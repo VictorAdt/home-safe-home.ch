@@ -48,7 +48,6 @@ exports.onCreateNode = async ({
   
 let multipleImages = node.galerie
 
-
   if (node.internal.type === "AllStrapiAtelier") {
     if (multipleImages.length > 0) {
       multipleImages.forEach(el => console.log(el))
@@ -72,20 +71,3 @@ let multipleImages = node.galerie
   }
 }
 
-
-exports.sourceNodes = ({ actions }) => {
-  const { createTypes } = actions;
-  createTypes( `
-    ${allStrapiTitrePageDAccueil}
-  `);
-}
-
-module.exports = `
-type allStrapiTitrePageDAccueil implements Node {
-  introduction: String
-  titre: String
-  consulting: String
-  service: String
-  workshop: String
-  banner: Media
-}`

@@ -69,7 +69,7 @@ export const pageQuery = graphql`
   query HomeQuery {
     atelier: allStrapiAtelier {
       edges {
-        ... on node {
+        node {
           strapiId
           id
           titre
@@ -82,7 +82,7 @@ export const pageQuery = graphql`
     }
     allStrapiTitrePageDAccueil {
       edges {
-        ... on node {
+        node {
           introduction
           titre
           strapiId
