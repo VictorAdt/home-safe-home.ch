@@ -7,7 +7,7 @@ import AtelierCard from "../components/atelier/atelier-card"
 import Img from "gatsby-image";
 
 const IndexPage = ({ data }) => {
-
+  console.log(data);
   return (
     <Layout>
       <SEO
@@ -16,33 +16,33 @@ const IndexPage = ({ data }) => {
         description="Page d'accueil"
       />
       <div className="home__top__content">
-        <h1>{data.allStrapiTitrePageDAccueil.edges[0].node.titre}</h1>
+        <h1>{data.allStrapiTitrePageDAccueil.nodes[0].titre}</h1>
         <div className="home__introduction">
-          <p>{data.allStrapiTitrePageDAccueil.edges[0].node.introduction}</p>
+          <p>{data.allStrapiTitrePageDAccueil.nodes[0].introduction}</p>
           <div>
             <Link to="/atelier" className="home__introduction__button">Workshop</Link>
             <Link to="/consulting" className="home__introduction__button">Consulting</Link>
           </div>
         </div>
       </div>
-      {data.allStrapiTitrePageDAccueil.edges[0].node.banner.childImageSharp.fixed &&
+      {data.allStrapiTitrePageDAccueil.nodes[0].banner &&
         <Img
-          fixed={data.allStrapiTitrePageDAccueil.edges[0].node.banner.childImageSharp.fixed}
+          fixed={data.allStrapiTitrePageDAccueil.nodes[0].banner.childImageSharp.fixed}
           imgStyle={{ position: "static" }}
         />
       }
       <div className="services">
         <div className="services__consulting">
           <h3>Consulting</h3>
-          <p>{data.allStrapiTitrePageDAccueil.edges[0].node.consulting}</p>
+          <p>{data.allStrapiTitrePageDAccueil.nodes[0].consulting}</p>
         </div>
         <div className="services__services">
           <h3>Services</h3>
-          <p>{data.allStrapiTitrePageDAccueil.edges[0].node.service}</p>
+          <p>{data.allStrapiTitrePageDAccueil.nodes[0].service}</p>
         </div>
         <div className="services__workshop">
           <h3>Workshop</h3>
-          <p>{data.allStrapiTitrePageDAccueil.edges[0].node.workshop}</p>
+          <p>{data.allStrapiTitrePageDAccueil.nodes[0].workshop}</p>
         </div>
       </div>
       <div className="home__event__">
@@ -81,20 +81,18 @@ export const pageQuery = graphql`
       }
     }
     allStrapiTitrePageDAccueil {
-      edges {
-        node {
-          introduction
-          titre
-          strapiId
-          id
-          consulting
-          workshop
-          service
-          banner {
-            childImageSharp {
-              fixed(width: 800){
-                src
-              }
+      nodes {
+        introduction
+        titre
+        strapiId
+        id
+        consulting
+        workshop
+        service
+        banner {
+          childImageSharp {
+            fixed(width: 800){
+              src
             }
           }
         }

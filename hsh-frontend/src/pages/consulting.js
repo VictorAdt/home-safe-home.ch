@@ -22,12 +22,18 @@ const Consulting = ({ data }) => {
             {content.section &&
               content.section.map((e, i) => (
                 <div className={`page__content__section ${i}`}>
-                  <h5>{e.titre}</h5>
-                  <Img
-                    fixed={e.image.childImageSharp.fixed}
-                    imgStyle={{ position: "static" }}
-                  />
-                  <p>{e.contenu}</p>
+                  {e.titre &&
+                    <h5>{e.titre}</h5>
+                  }
+                  {e.image &&
+                    <Img
+                      fixed={e.image.childImageSharp.fixed}
+                      imgStyle={{ position: "static" }}
+                    />
+                  }
+                  {e.contenu &&
+                    <p>{e.contenu}</p>
+                  }
                 </div>
               ))}
           </div>

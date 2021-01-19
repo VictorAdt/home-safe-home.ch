@@ -45,8 +45,8 @@ exports.onCreateNode = async ({
   createNodeId,
 }) => {
   const { createNode } = actions
-  
-let multipleImages = node.galerie
+
+  let multipleImages = node.galerie
 
   if (node.internal.type === "AllStrapiAtelier") {
     if (multipleImages.length > 0) {
@@ -63,11 +63,79 @@ let multipleImages = node.galerie
           })
         )
       )
-   
-     multipleImages.forEach((image, i) => {
+
+      multipleImages.forEach((image, i) => {
         image.localFile___NODE = images[i].id
       })
     }
   }
+}
+
+exports.sourceNodes = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type StrapiTitrePageDAccueil implements Node{
+      banner: File
+      consulting: String
+      id: String
+      introduction: String
+      service: String
+      strapiId: Int
+      titre: String
+      workshop: String
+    }
+    type StrapiAtelier implements Node{
+      strapiId: Int
+      id: String
+      titre: String
+      type: String
+      description: String
+      description_courte: String
+    }
+    type StrapiPagePhilosophie implements Node{
+      strapiId: Int
+      id: String
+      information: String
+      description: String
+      titre: String
+      section: [section]
+    }
+    type StrapiPageConsulting implements Node{
+      strapiId: Int
+      id: String
+      information: String
+      description: String
+      titre: String
+      section: [section]
+    }
+    type section{
+      image: File
+      contenu: String
+      titre: String
+    }
+    type StrapiPageEquipe implements Node{
+      titre: String
+      collaborateur: [collaborateur]
+    }
+    type collaborateur{
+      photo: File
+      contenu: String
+      titre: String
+      nom: String
+      prenom: String
+      role: String
+      id: String
+    }
+    type StrapiTestimonial implements Node{
+      texte: String
+      nom: String
+    }
+    type StrapiRuban implements Node{
+      texte: String
+      strapiId: Int
+      id: String
+    }
+  `
+  createTypes(typeDefs)
 }
 

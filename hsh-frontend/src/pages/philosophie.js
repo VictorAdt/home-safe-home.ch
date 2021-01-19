@@ -5,6 +5,7 @@ import SEO from './../components/seo'
 
 const Philosophie = ({ data }) => {
   const content = data.allStrapiPagePhilosophie.nodes[0]
+  console.log(content);
   return (
     <Layout>
       <SEO

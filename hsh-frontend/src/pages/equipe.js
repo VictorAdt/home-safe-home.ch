@@ -13,14 +13,18 @@ const Equipe = ({ data }) => {
         description="Présentations d'équipe"
       />
       <div className="page equipe">
-        <h1>{content.titre}</h1>
+        {content.titre &&
+          <h1>{content.titre}</h1>
+        }
         <div className="equipe__collaborateur__container">
           {content.collaborateur.map((e, i) => (
             <div className="equipe__collaborateur__card" key={i}>
-              <Img
-                fixed={e.photo.childImageSharp.fixed}
-                imgStyle={{ position: "static" }}
-              />
+              {e.photo &&
+                <Img
+                  fixed={e.photo.childImageSharp.fixed}
+                  imgStyle={{ position: "static" }}
+                />
+              }
               <p>{e.prenom + ' ' + e.nom}</p>
               <p>{e.role}</p>
             </div>
