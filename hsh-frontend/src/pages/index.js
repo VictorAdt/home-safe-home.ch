@@ -7,7 +7,6 @@ import AtelierCard from "../components/atelier/atelier-card"
 import Img from "gatsby-image";
 
 const IndexPage = ({ data }) => {
-  console.log(data);
   return (
     <Layout>
       <SEO

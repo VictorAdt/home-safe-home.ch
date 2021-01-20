@@ -5,7 +5,6 @@ import SEO from "../components/seo"
 import Img from "gatsby-image";
 
 const Consulting = ({ data }) => {
-  console.log(data);
   const content = data.allStrapiPageConsulting.nodes[0]
   return (
     <Layout>

@@ -4,7 +4,6 @@ import { window } from 'browser-monads';
 
 const AtelierCard = props => {
     const date = new Date(props.atelier.Date)
-    console.log(date);
     if (props) {
         return (
             <div className="atelier__card atelier">

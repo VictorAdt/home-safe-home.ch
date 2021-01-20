@@ -30,7 +30,6 @@ const ContactForm = () => {
     }
 
     useEffect(() => {
-        console.log(contact);
     }, [contact]);
 
     const handleSubmit = async e => {
@@ -62,7 +61,6 @@ const ContactForm = () => {
                     url: 'http://backend.homesafehome.ch/contacts',
                     data,
                 })
-                console.log(contactRes);
                 if (contactRes.status === 200) {
                     setMessage('Message envoyé')
                     setTimeout(() => {
@@ -70,9 +68,7 @@ const ContactForm = () => {
                     }, 500)
                     return
                 }
-                console.log(message);
             } catch (e) {
-                console.log(e.response.status);
                 if (e.response.status === 500) {
                     setMessage('Une erreur est survenue')
                 } else if (e.response.status === 400) {

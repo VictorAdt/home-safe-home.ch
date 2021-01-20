@@ -4,7 +4,6 @@ import axios from 'axios'
 import ResponseMessage from './response-message';
 
 const SubscriptionForm = props => {
-    console.log(props);
     const [filed, setFiled] = useState(false)
     const [message, setMessage] = useState('')
     const [inscription, setInscription] = useState({
@@ -21,7 +20,6 @@ const SubscriptionForm = props => {
 
     const handleChange = async (e) => {
         setInscription({ ...inscription, [e.target.name]: e.target.value })
-        console.log(inscription)
         if (
             inscription.nom !== ''
             && inscription.prenom !== ''
@@ -36,11 +34,9 @@ const SubscriptionForm = props => {
         } else {
             setFiled(false)
         }
-        console.log(filed);
     }
 
     useEffect(() => {
-        console.log(inscription);
     }, [inscription]);
 
     const handleSubmit = async e => {

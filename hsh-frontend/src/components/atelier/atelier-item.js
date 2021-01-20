@@ -6,7 +6,6 @@ import Img from "gatsby-image";
 
 const AtelierItem = ({ data }) => {
     const atelier = data.strapiAtelier
-    console.log(atelier);
     return (
         <Layout>
             <div className="atelier__item page">

@@ -18,7 +18,6 @@ const Ruban = () => {
    }
   `)
 
-  console.log(data);
   return (
     <div className="marquee">
       <Marquee> {data.allStrapiRuban.edges[0].node.texte} </Marquee>
