@@ -91,6 +91,10 @@ exports.sourceNodes = ({ actions }) => {
       type: String
       description: String
       description_courte: String
+      galerie: [galerie]
+    }
+    type galerie {
+      image: File
     }
     type StrapiPagePhilosophie implements Node{
       strapiId: Int
