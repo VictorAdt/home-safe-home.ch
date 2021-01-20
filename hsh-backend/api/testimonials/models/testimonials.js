@@ -1,8 +1,36 @@
 'use strict';
 
 /**
- * Read the documentation (https://strapi.io/documentation/v3.x/concepts/models.html#lifecycle-hooks)
- * to customize this model
+ * Lifecycle callbacks for the `Post` model.
  */
 
-module.exports = {};
+const request = require('request');
+const axios = require('axios')
+
+
+module.exports = {
+  lifecycles: {
+    async afterCreate(entry) {
+    console.log('oupss')
+      axios.post('http://frontend.homesafehome.ch/rebuild', entry)
+        .catch(() => {
+          // Ignore
+        }
+        );
+    },
+    async afterUpdate(entry) {
+      axios.post('http://frontend.homesafehome.ch/rebuild', entry)
+        .catch(() => {
+          // Ignore
+        }
+        );
+    },
+    async afterDestroy(entry) {
+      axios.post('http://frontend.homesafehome.ch/rebuild', entry)
+        .catch(() => {
+          // Ignore
+        }
+        );
+    },
+  },
+};

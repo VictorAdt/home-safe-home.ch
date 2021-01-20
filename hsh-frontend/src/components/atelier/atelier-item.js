@@ -34,7 +34,9 @@ const AtelierItem = ({ data }) => {
                     <p className="atelier__item__infos" >{atelier.infos}</p>
                 </div>
                 <div className="atelier__item__galerie">
-                    {atelier.galerie.map((e, i) => (
+                    {
+                    atelier.galerie.map((e, i) => (
+                        e.image &&
                         <Img
                             fixed={e.image.childImageSharp.fixed}
                             imgStyle={{ position: "static" }}
