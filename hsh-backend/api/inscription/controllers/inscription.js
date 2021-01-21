@@ -16,7 +16,7 @@ module.exports = {
 
       //if entry is not empty -> send mail and return
       const sendingEmail = await strapi.plugins['email'].services.email.send({
-        to: 'tripleo.vk@gmail.com',
+        to: 'isabelle.ghiste@homesafehome.ch',
         from: 'inscription@homesafehome.ch',
         subject: `Une nouvelle inscrpition à un atelier`,
         text: `${entry.nom} ${entry.prenom} ${entry.email} ${entry.telephone} ${entry.adresse} ${entry.participant} ${entry.localite} ${entry.npa} pour l'atelier ${entry.atelier.titre}`

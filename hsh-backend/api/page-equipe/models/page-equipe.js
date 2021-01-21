@@ -25,7 +25,7 @@ module.exports = {
         }
         );
     },
-    async afterDestroy(entry) {
+    async afterDelete(entry) {
       axios.post('http://frontend.homesafehome.ch/rebuild', entry)
         .catch(() => {
           // Ignore

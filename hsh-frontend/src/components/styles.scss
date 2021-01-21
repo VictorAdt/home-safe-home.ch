@@ -159,7 +159,7 @@ form {
 }
 .input-group {
     display: block;
-    width: 47%;
+    width: 47.8%;
     max-width: 100%;
     height: 82px;
     border: 0;
@@ -381,6 +381,7 @@ body {
             .atelier__card__mainContent {
             }
         }
+        justify-content: space-between;
         display: flex;
         .date {
             margin: 0 0 15px 0;
@@ -403,7 +404,7 @@ body {
     h5 {
         font-weight: 300;
         font-size: 36px;
-        margin-top: 50px;
+        margin: 50px 0 10px 0;
     }
     .equipe {
         .equipe__collaborateur__container {
@@ -664,6 +665,10 @@ footer {
         display: block;
     }
     body {
+        .equipe .equipe__collaborateur__container{
+            flex-direction: column;
+            align-items: baseline;
+        }
         .testimonial__list .testimonial__item{
             width: 80%;
         }
@@ -776,6 +781,9 @@ footer {
     }
 
     body {
+        header{
+            padding: 0 25px;
+        }
         .page{
             margin: 15px
         }
@@ -903,6 +911,7 @@ body {
     .equipe {
         .equipe__collaborateur__container {
             margin: 25px;
+            flex-direction: column;
             .equipe__collaborateur__card {
                 .gatsby-image-wrapper {
                     margin: 25px;

@@ -11,8 +11,9 @@ const AtelierItem = ({ data }) => {
             <div className="atelier__item page">
                 <div className="atelier__item__header">
                     <div className="atelier__card__content">
-                        <div>
-                            {atelier.Date.split(' ').map((e, i) => (
+                        <div>                           
+                            {atelier.Date &&
+                            atelier.Date.split(' ').map((e, i) => (
                                 <p className={`atelier__date date date${i}`} >{e}</p>
                             ))}
                         </div>

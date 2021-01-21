@@ -9,7 +9,8 @@ const AtelierCard = props => {
             <div className="atelier__card atelier">
                 <div className="atelier__card__content">
                     <div>
-                        {props.atelier.Date.split(' ').map((e, i) => (
+                        {props.atelier.Date &&
+                        props.atelier.Date.split(' ').map((e, i) => (
                             <p className={`atelier__date date date${i}`} >{e}</p>
                         ))}
                     </div>
