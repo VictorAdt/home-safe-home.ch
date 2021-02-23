@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "hsh-backend",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -11,31 +11,28 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "axios": "^0.21.1",
     "knex": "<0.20.0",
-    "sqlite3": "latest",
-    "strapi": "^3.5.1",
-    "strapi-admin": "^3.5.1",
-    "strapi-connector-bookshelf": "3.1.6",
-    "strapi-plugin-content-manager": "3.1.6",
-    "strapi-plugin-content-type-builder": "3.1.6",
-    "strapi-plugin-email": "3.1.6",
-    "strapi-plugin-graphql": "3.1.6",
-    "strapi-plugin-upload": "^3.5.1",
-    "strapi-plugin-users-permissions": "3.1.6",
-    "strapi-provider-email-sendgrid": "^3.3.4",
-    "strapi-provider-email-sendmail": "^3.3.4",
-    "strapi-utils": "3.1.6"
+    "sqlite3": "5.0.0",
+    "strapi": "3.5.1",
+    "strapi-admin": "3.5.1",
+    "strapi-connector-bookshelf": "3.5.1",
+    "strapi-plugin-content-manager": "3.5.1",
+    "strapi-plugin-content-type-builder": "3.5.1",
+    "strapi-plugin-email": "3.5.1",
+    "strapi-plugin-html-wysiwyg": "^1.0.5",
+    "strapi-plugin-upload": "3.5.1",
+    "strapi-plugin-users-permissions": "3.5.1",
+    "strapi-utils": "3.5.1"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "58bd4397-9d06-46f9-a348-b3c810ac451e"
+    "uuid": "e093bcfe-c18e-470a-86cb-25011afe9e70"
   },
   "engines": {
-    "node": ">=10.0.0",
-    "npm": ">=6.0.0"
+    "node": ">=10.16.0 <=14.x.x",
+    "npm": "^6.0.0"
   },
   "license": "MIT"
 }
