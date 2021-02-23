@@ -2,21 +2,23 @@
   "kind": "singleType",
   "collectionName": "page_ateliers",
   "info": {
-    "name": "page atelier"
+    "name": "page atelier",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "titre": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
     "information": {
       "type": "text"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }
