@@ -2,11 +2,13 @@
   "kind": "singleType",
   "collectionName": "page_equipes",
   "info": {
-    "name": "page equipe"
+    "name": "page equipe",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "titre": {
@@ -18,10 +20,10 @@
       "component": "collaborateur.collaborateur"
     },
     "description": {
-      "type": "text"
+      "type": "richtext"
     },
     "information": {
-      "type": "text"
+      "type": "richtext"
     }
   }
 }

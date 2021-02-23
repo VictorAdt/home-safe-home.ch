@@ -2,15 +2,13 @@
   "collectionName": "components_section_sections",
   "info": {
     "name": "section",
-    "icon": "ad"
+    "icon": "ad",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "titre": {
       "type": "string"
-    },
-    "contenu": {
-      "type": "text"
     },
     "image": {
       "model": "file",
@@ -22,6 +20,9 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "contenu": {
+      "type": "richtext"
     }
   }
 }

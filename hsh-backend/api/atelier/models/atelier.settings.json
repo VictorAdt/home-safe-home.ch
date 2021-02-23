@@ -2,11 +2,13 @@
   "kind": "collectionType",
   "collectionName": "ateliers",
   "info": {
-    "name": "atelier"
+    "name": "atelier",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "titre": {
@@ -22,19 +24,19 @@
     "Date": {
       "type": "datetime"
     },
-    "infos": {
-      "type": "text"
-    },
-    "description": {
-      "type": "text"
-    },
-    "description_courte": {
-      "type": "text"
-    },
     "galerie": {
       "type": "component",
       "repeatable": true,
       "component": "image.galerie"
+    },
+    "description_courte": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "infos": {
+      "type": "richtext"
     }
   }
 }

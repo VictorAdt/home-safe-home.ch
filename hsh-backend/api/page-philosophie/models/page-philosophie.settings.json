@@ -2,26 +2,28 @@
   "kind": "singleType",
   "collectionName": "page_philosophies",
   "info": {
-    "name": "page philosophie"
+    "name": "page philosophie",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "titre": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
-    "information": {
-      "type": "text"
-    },
     "section": {
       "type": "component",
       "repeatable": true,
       "component": "section.section"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "information": {
+      "type": "richtext"
     }
   }
 }

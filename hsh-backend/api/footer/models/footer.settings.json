@@ -2,11 +2,13 @@
   "kind": "singleType",
   "collectionName": "footers",
   "info": {
-    "name": "footer"
+    "name": "footer",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "Social": {
@@ -15,10 +17,10 @@
       "component": "socials.social"
     },
     "acces": {
-      "type": "text"
+      "type": "richtext"
     },
     "contact": {
-      "type": "text"
+      "type": "richtext"
     }
   }
 }

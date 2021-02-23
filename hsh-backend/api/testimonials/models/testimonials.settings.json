@@ -2,18 +2,20 @@
   "kind": "collectionType",
   "collectionName": "testimonials",
   "info": {
-    "name": "testimonials"
+    "name": "testimonials",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
-    "texte": {
-      "type": "text"
-    },
     "nom": {
       "type": "string"
+    },
+    "texte": {
+      "type": "richtext"
     }
   }
 }

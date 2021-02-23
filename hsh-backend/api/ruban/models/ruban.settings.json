@@ -2,15 +2,17 @@
   "kind": "singleType",
   "collectionName": "rubans",
   "info": {
-    "name": "ruban"
+    "name": "ruban",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "texte": {
-      "type": "string"
+      "type": "richtext"
     }
   }
 }

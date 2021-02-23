@@ -2,11 +2,13 @@
   "kind": "singleType",
   "collectionName": "titre_page_d_accueils",
   "info": {
-    "name": "page d'accueil"
+    "name": "page d'accueil",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "titre": {
@@ -35,16 +37,16 @@
       "required": false
     },
     "workshop": {
-      "type": "text"
+      "type": "richtext"
     },
     "service": {
-      "type": "text"
+      "type": "richtext"
     },
     "consulting": {
-      "type": "text"
+      "type": "richtext"
     },
     "introduction": {
-      "type": "text"
+      "type": "richtext"
     }
   }
 }

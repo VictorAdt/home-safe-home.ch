@@ -14,10 +14,10 @@
     "titre": {
       "type": "string"
     },
-    "information": {
-      "type": "text"
-    },
     "description": {
+      "type": "richtext"
+    },
+    "information": {
       "type": "richtext"
     }
   }
