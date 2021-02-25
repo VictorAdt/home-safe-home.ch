@@ -102,7 +102,7 @@ export const pageQuery = graphql`
         service
         banner {
           childImageSharp {
-            fixed(width: 1920){
+            fixed(width: 1650){
               src
             }
           }
