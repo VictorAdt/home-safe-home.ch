@@ -9,41 +9,53 @@ import Img from "gatsby-image";
 const IndexPage = ({ data }) => {
   return (
     <Layout>
+
       <SEO
         title="Home"
         lang="fr"
         description="Page d'accueil"
       />
+
+      {/* Header Page */}
       <div className="home__top__content">
         <h1>{data.allStrapiTitrePageDAccueil.nodes[0].titre}</h1>
         <div className="home__introduction">
-          <p>{data.allStrapiTitrePageDAccueil.nodes[0].introduction}</p>
-          <div>
+
+          {data.allStrapiTitrePageDAccueil.nodes[0].introduction && <div className="text-format" dangerouslySetInnerHTML={{__html:data.allStrapiTitrePageDAccueil.nodes[0].introduction}} />}
+
+          <div className="action">
             <Link to="/atelier" className="home__introduction__button">Workshop</Link>
             <Link to="/consulting" className="home__introduction__button">Consulting</Link>
           </div>
+
         </div>
       </div>
+
+      {/* Banner */}
       {data.allStrapiTitrePageDAccueil.nodes[0].banner &&
         <Img
           fixed={data.allStrapiTitrePageDAccueil.nodes[0].banner.childImageSharp.fixed}
           imgStyle={{ position: "static" }}
         />
       }
+
+      {/* Services */}
       <div className="services">
         <div className="services__consulting">
           <h3>Consulting</h3>
-          <p>{data.allStrapiTitrePageDAccueil.nodes[0].consulting}</p>
+          {data.allStrapiTitrePageDAccueil.nodes[0].consulting && <div className="text-format" dangerouslySetInnerHTML={{__html:data.allStrapiTitrePageDAccueil.nodes[0].consulting}} />}
         </div>
         <div className="services__services">
           <h3>Services</h3>
-          <p>{data.allStrapiTitrePageDAccueil.nodes[0].service}</p>
+          {data.allStrapiTitrePageDAccueil.nodes[0].service && <div className="text-format" dangerouslySetInnerHTML={{__html:data.allStrapiTitrePageDAccueil.nodes[0].service}} />}
         </div>
         <div className="services__workshop">
           <h3>Workshop</h3>
-          <p>{data.allStrapiTitrePageDAccueil.nodes[0].workshop}</p>
+          {data.allStrapiTitrePageDAccueil.nodes[0].workshop && <div className="text-format" dangerouslySetInnerHTML={{__html:data.allStrapiTitrePageDAccueil.nodes[0].workshop}} />}
         </div>
       </div>
+
+      {/* Atelier */}
       <div className="home__event__">
         <h4>les prochains ateliers</h4>
         <div className="atelier__cards__container">
@@ -90,7 +102,7 @@ export const pageQuery = graphql`
         service
         banner {
           childImageSharp {
-            fixed(width: 800){
+            fixed(width: 1920){
               src
             }
           }

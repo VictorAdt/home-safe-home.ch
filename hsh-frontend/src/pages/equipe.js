@@ -12,10 +12,13 @@ const Equipe = ({ data }) => {
         lang="fr"
         description="Présentations d'équipe"
       />
+
+      {/* Page Team */}
       <div className="page equipe">
-        {content.titre &&
-          <h1>{content.titre}</h1>
-        }
+
+        {content.titre && <h1 className="page-title">{content.titre}</h1>}
+
+        {/* Team list */}
         <div className="equipe__collaborateur__container">
           {content.collaborateur.map((e, i) => (
             <div className="equipe__collaborateur__card" key={i}>
@@ -27,6 +30,9 @@ const Equipe = ({ data }) => {
               }
               <p>{e.prenom + ' ' + e.nom}</p>
               <p>{e.role}</p>
+
+              {e.description && <div className="text-format description" dangerouslySetInnerHTML={{__html:e.Description}} />}
+
             </div>
           ))}
         </div>
@@ -46,6 +52,7 @@ query EquipeQuery {
         prenom
         role
         id
+        Description
         photo {
           childImageSharp {
             fixed(width: 800){

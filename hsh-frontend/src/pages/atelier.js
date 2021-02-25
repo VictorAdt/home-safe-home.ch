@@ -13,9 +13,8 @@ const Atelier = ({ data }) => {
         description="Présentations des prochains ateliers"
       />
       <div className="page atelier">
-        <h1>
-          {pageContent.titre}</h1>
-        <p>{pageContent.description}</p>
+        <h1 className="page-title">{pageContent.titre}</h1>
+        {pageContent.description && <div className="text-format description" dangerouslySetInnerHTML={{__html:pageContent.description}} />}
         <div className="atelier__cards__container">
           {
             data.atelier.edges.map((e, i) => (

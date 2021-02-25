@@ -17,16 +17,17 @@ const AtelierCard = props => {
                     <div className="atelier__card__mainContent">
                         <p className="atelier__type type"> {props.atelier.type}</p>
                         <p className="atelier__title title"> {props.atelier.titre}</p>
-                        <p className="atelier__description" >{props.atelier.description}</p>
+                        <p className="atelier__description" >{props.atelier.description_courte}</p>
                     </div>
                 </div>
+
                 {window.location.pathname !== '/inscription' &&
-                    <div className="atelier__card__buttons">
-                        <Link to={`/atelier/${props.atelier.id}`}> Détails
-                        </Link>
-                        <Link to={`/inscription`} state={{ atelier: props.atelier }}> S'inscrire
-                    </Link>
-                    </div>
+                  <div className="atelier__card__buttons">
+                      <Link to={`/atelier/${props.atelier.id}`}> Détails
+                      </Link>
+                      <Link to={`/inscription`} state={{ atelier: props.atelier }}> S'inscrire
+                  </Link>
+                </div>
                 }
             </div>
         )

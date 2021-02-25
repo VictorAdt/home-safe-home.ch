@@ -12,7 +12,7 @@ const Contact = () => {
                 description="Page de contact"
             />
             <div className="page contact">
-                <h1>Contact</h1>
+                <h1 className="page-title">Contact</h1>
                 <ContactForm />
             </div>
         </Layout>

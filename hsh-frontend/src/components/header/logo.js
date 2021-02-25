@@ -6,8 +6,8 @@ import BrandingMobile from "./../logo/branding-mobile.svg";
 const Logo = () => {
     return (
         <Link to="/">
-            <Branding className="brandBig"/>
-            <BrandingMobile className="brandSmall" />
+          <Branding className="brandBig"/>
+          <BrandingMobile className="brandSmall" />
         </Link>
     );
 };

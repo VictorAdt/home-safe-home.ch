@@ -14,7 +14,7 @@ const Consulting = ({ data }) => {
           lang="fr"
           description="Page de nos services consulting"
         />
-        <h1>{content.titre}</h1>
+        <h1 className="page-title">{content.titre}</h1>
         <div className="page__content">
           <div className="page__content__main">
             <p className="page__content__main__description">{content.description}</p>

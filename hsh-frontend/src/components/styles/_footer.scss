@@ -1,0 +1,31 @@
+/* Footer */
+footer {
+    flex-shrink: 0;
+    box-sizing: border-box;
+
+    .footer__social {
+        display: flex;
+        flex-direction: column;
+        a {
+            color: #000;
+        }
+        a:hover {
+            color: #fff;
+        }
+    }
+
+    margin-top: 50px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+
+    div {
+      width:30%;
+      padding: 25px 50px;
+      box-sizing: border-box;
+    }
+
+    .title {
+        color: #fff;
+    }
+}

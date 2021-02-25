@@ -6,7 +6,6 @@ const Footer = () => {
         query FooterQuery {
             allStrapiFooter {
                 nodes {
-                acces
                 contact
                 Social {
                     lien
@@ -23,10 +22,7 @@ const Footer = () => {
                 <p className="title">contact</p>
                 <p>{content.contact}</p>
             </div>
-            <div className="footer__acces">
-                <p className="title">acces</p>
-                {content.acces}
-            </div>
+            
             <div className="footer__social">
                 <p className="title">social</p>
                 {content.Social.map((e, i) => (

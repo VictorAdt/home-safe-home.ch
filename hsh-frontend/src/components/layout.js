@@ -21,12 +21,25 @@ const Layout = ({ children }) => {
           title
         }
       }
+      allStrapiRuban {
+        edges {
+          node {
+            texte
+            strapiId
+            id
+          }
+        }
+      }
     }
   `)
 
   return (
     <div class="content">
-      <Ruban/>
+      {data.allStrapiRuban.edges[0].node.texte && <Ruban/>}
+      
+      <link rel="preconnect" href="https://fonts.gstatic.com"/>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet"/>
+
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main>{children}</main>
       <Footer />

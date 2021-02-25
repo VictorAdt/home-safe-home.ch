@@ -13,7 +13,7 @@ const Philosophie = ({ data }) => {
         description="Présentations de notre philosophie de travail"
       />
       <div className="philosophie page">
-        <h1>{content.titre}</h1>
+        <h1 className="page-title">{content.titre}</h1>
         <div className="page__content">
           <div className="page__content__main">
             <p className="page__content__main__description">{content.description}</p>

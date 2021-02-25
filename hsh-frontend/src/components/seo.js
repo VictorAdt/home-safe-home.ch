@@ -25,7 +25,7 @@ function SEO({ description, lang, meta, title }) {
     `
   )
 
-  const metaDescription = description 
+  const metaDescription = description
   const defaultTitle = site.siteMetadata?.title
 
   return (
@@ -69,7 +69,9 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      
+    </Helmet>
   )
 }
 
