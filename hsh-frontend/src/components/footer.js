@@ -17,18 +17,21 @@ const Footer = () => {
     `)
     const content = data.allStrapiFooter.nodes[0]
     return (
-        <footer>
-            <div className="footer__contact">
-                <p className="title">contact</p>
-                <p>{content.contact}</p>
+        <footer id="footer">
+          <div className="footer-inner row">
+            <div className="col col-contact s12 m6 l6">
+              <h5 className="title">contact</h5>
+              <div className="text-format" dangerouslySetInnerHTML={{__html:content.contact}} />
             </div>
-            
-            <div className="footer__social">
-                <p className="title">social</p>
+            <div className="col col-social s12 m6 l6">
+              <h5 className="title">social</h5>
+              <ul className="social">
                 {content.Social.map((e, i) => (
-                    <a key={i} target="_blank" href={e.lien}> {e.nom}</a>
+                  <li><a key={i} target="_blank" href={e.lien}> {e.nom}</a></li>
                 ))}
+              </ul>
             </div>
+          </div>
         </footer>
     );
 };

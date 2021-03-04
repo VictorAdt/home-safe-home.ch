@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Footer from './footer'
 import Header from "./header/header"
-import './styles.scss'
+import '../styles/styles.scss'
 import Ruban from "./ruban"
 
 const Layout = ({ children }) => {
@@ -34,16 +34,23 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div class="content">
-      {data.allStrapiRuban.edges[0].node.texte && <Ruban/>}
-      
-      <link rel="preconnect" href="https://fonts.gstatic.com"/>
-      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet"/>
+    <>
+      {/** Import fonts **/}
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;600&display=swap" rel="stylesheet" />
 
+      {/** Import Ruban **/}
+      {data.allStrapiRuban.edges[0].node.texte && <Ruban/>}
+
+      {/** Import Header **/}
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+
+      {/** Display Main **/}
       <main>{children}</main>
+
+      {/** Import Footer **/}
       <Footer />
-    </div>
+    </>
   )
 }
 

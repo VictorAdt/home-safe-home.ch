@@ -1,0 +1,56 @@
+// styles
+footer#footer {
+  width: 100%;
+  display: block;
+  padding: 40px;
+  background: $red;
+
+  .footer-inner {
+    .col {
+      padding: 0 10px;
+      font-weight: bold;
+
+      .title {
+        color: white;
+      }
+      .social {
+        font-size: 1.25em;
+        a {
+          border-bottom: 2px solid white;
+          margin-bottom: 5px;
+          display: inline-block;
+          @include transition(0.2s all ease);
+
+          &:hover {
+            border-color: $black;
+            color: white;
+          }
+        }
+      }
+
+      &.col-contact {
+        text-align: right;
+      }
+      &.col-social {
+        text-align: left;
+      }
+    }
+  }
+}
+
+// responsive
+@media #{$small-and-down} {
+  // styles for small screens and down
+}
+@media #{$medium-and-up} {
+  // styles for medium screens and larger
+}
+@media #{$medium-and-down} {
+  // styles for medium screens and down
+}
+@media #{$large-and-up} {
+  // styles for large screens and up
+}
+@media #{$extra-large-and-up} {
+  // styles for extra large screens and up
+}

@@ -1,0 +1,42 @@
+// styles
+span.white {
+  color: white;
+}
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  display: inline-block;
+  border-bottom: 5px solid $red;
+}
+.button {
+  padding: 10px;
+  display: block;
+  background: $grey-l;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: black;
+  font-weight: bold;
+  @include transition(0.2s all ease);
+
+  &:hover {
+    background: $red;
+    color: white;
+  }
+}
+// responsive
+@media #{$small-and-down} {
+  // styles for small screens and down
+}
+@media #{$medium-and-up} {
+  // styles for medium screens and larger
+}
+@media #{$medium-and-down} {
+  // styles for medium screens and down
+}
+@media #{$large-and-up} {
+  // styles for large screens and up
+}
+@media #{$extra-large-and-up} {
+  // styles for extra large screens and up
+}

@@ -12,19 +12,28 @@ const Atelier = ({ data }) => {
         lang="fr"
         description="Présentations des prochains ateliers"
       />
-      <div className="page atelier">
-        <h1 className="page-title">{pageContent.titre}</h1>
-        {pageContent.description && <div className="text-format description" dangerouslySetInnerHTML={{__html:pageContent.description}} />}
-        <div className="atelier__cards__container">
-          {
-            data.atelier.edges.map((e, i) => (
-              <AtelierCard
-                atelier={e.node}
-              />
-            ))
-          }
+
+      {/* Header Page */}
+      <section className="section section-header" data-sal="slide-up" data-sal-delay="250" data-sal-easing="ease">
+        <div className="section-inner row">
+          <div className="col col-title s12 m5 l5">
+            <h1 className="title">
+              {pageContent.titre}
+            </h1>
+          </div>
+          <div className="col col-content s12 m7 l7">
+            {pageContent.description && <div className="text-format description" dangerouslySetInnerHTML={{__html:pageContent.description}} />}
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* Events */}
+      <section className="section section-events">
+        {data.atelier.edges.map((e, i) => (
+          <AtelierCard  atelier={e.node}/>
+        ))}
+      </section>
+
     </Layout>
   );
 };

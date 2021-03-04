@@ -20,17 +20,22 @@ const TestimonialList = () => {
     const content = data.allStrapiTestimonial.nodes
 
     return (
-        <div className="testimonial__list">
-            <Carousel>
+        <section className="section section-testimonial" data-sal="slide-up" data-sal-delay="250" data-sal-easing="ease">
+          <div className="section-inner">
+            <h4 className="title">Feedback</h4>
+            <div className="content">
+              <Carousel>
                 {content.map((e, i) => (
-                    <TestimonialItem
-                        key={i}
-                        nom={e.nom}
-                        texte={e.texte}
-                    />
+                  <TestimonialItem
+                    key={i}
+                    nom={e.nom}
+                    texte={e.texte}
+                  />
                 ))}
-            </Carousel>
-        </div>
+              </Carousel>
+            </div>
+          </div>
+        </section>
     );
 };
 

@@ -8,41 +8,47 @@ const AtelierItem = ({ data }) => {
     const atelier = data.strapiAtelier
     return (
         <Layout>
-            <div className="atelier__item page">
-                <div className="atelier__item__header">
-                    <div className="atelier__card__content">
-                        <div>
-                            {atelier.Date &&
-                            atelier.Date.split(' ').map((e, i) => (
-                                <p className={`atelier__date date date${i}`} >{e}</p>
-                            ))}
-                        </div>
-                        <div className="atelier__card__mainContent">
-                            <p className="atelier__type type"> {atelier.type}</p>
-                            <h1 className="atelier__title title"> {atelier.titre}</h1>
-                        </div>
-                    </div>
-                    <div className="atelier__margin" >
-                        <Link to="/inscription" state={{ atelier: atelier }} className="home__introduction__button">S'inscrire</Link>
-                    </div>
-                </div>
-                
-                <div className="atelier__item__content">
-                    <p className="atelier__item__description" >{atelier.description}</p>
-                    <p className="atelier__item__description__margin">{atelier.infos}</p>
-                </div>
-
-                <div className="atelier__item__galerie">
-                    {
-                    atelier.galerie.map((e, i) => (
-                        e.image &&
-                        <Img
-                            fixed={e.image.childImageSharp.fixed}
-                            imgStyle={{ position: "static" }}
-                        />
-                    ))}
-                </div>
+        <section className="section section-events" data-sal="slide-up" data-sal-delay="300" data-sal-easing="linear">
+          <div className="card-atelier">
+            <div className="content row">
+              <div className="col col-date s1 m1 l1">
+                {atelier.Date && atelier.Date.split(' ').map((e, i) => (
+                  <span className={`date date${i}`} >{e}</span>
+                ))}
+              </div>
+              <div className="col col-title s9 m9 l9">
+                <div className="type">{atelier.type}</div>
+                <h4 className="title">{atelier.titre}</h4>
+              </div>
             </div>
+          </div>
+        </section>
+
+        <section className="section section-text" data-sal="slide-up" data-sal-delay="300" data-sal-easing="linear">
+          <div className="section-inner row">
+            <div className="col col-action s12 m2 l2">
+              <Link to="/inscription" state={{ atelier: atelier }} className="button">S'inscrire</Link>
+            </div>
+            <div className="col col-content s12 m8 l8">
+              {atelier.image && <Img fixed={atelier.image.childImageSharp.fixed} imgStyle={{ position: "static" }} />}
+              <div className="text-format" dangerouslySetInnerHTML={{__html:atelier.description}} />
+            </div>
+            <div className="col col-aside s12 m2 l2">
+              <div className="text-format" dangerouslySetInnerHTML={{__html:atelier.infos}} />
+            </div>
+          </div>
+        </section>
+
+        <div className="atelier__item__galerie">
+            {
+            atelier.galerie.map((e, i) => (
+                e.image &&
+                <Img
+                    fixed={e.image.childImageSharp.fixed}
+                    imgStyle={{ position: "static" }}
+                />
+            ))}
+        </div>
         </Layout>
     );
 };
